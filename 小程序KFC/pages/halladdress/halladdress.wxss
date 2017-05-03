@@ -56,9 +56,8 @@
     margin-top: 0;
     font-size: 14px;
 }
-.searchbar-result .weui-cell {
 
-}
+.searchbar-result .weui-cell {}
 
 .searchbar-result:before {
     display: none;
@@ -93,6 +92,7 @@
     bottom: 0;
     background-color: #fff;
 }
+
 .footer .address-item {
     height: 48px;
     width: 100%;
@@ -104,15 +104,43 @@
     text-overflow: ellipsis;
 }
 
-.footer .address-item text{
+.footer .address-item text {
     font-size: 16px;
     color: #000;
     font-weight: 300;
 }
 
-.footer .address-item image{
+.footer .address-item image {
     height: 16px;
     width: 16px;
     vertical-align: center;
     margin-right: 10px;
+}
+
+.address-title:after {
+    content: ' ';
+    display: table;
+    visibility: hidden;
+    clear: both;
+}
+
+.address-title .distance {
+    display: inline-block;
+    float: right;
+    padding-right: 30px;
+}
+
+.address-title image {
+    float: left;
+    height: 20px;
+    width: 20px;
+    margin-top: 6px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.address-item .posi__logo {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
 }

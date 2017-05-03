@@ -5,7 +5,8 @@ Page({
     latitude: 0,
     longitude: 0,
     markers: [],
-    poi: ''
+    poi: '',
+    distance: 0
   },
   //异步加marker
   onReady: function () {
@@ -46,10 +47,11 @@ Page({
           },
           complete: function (res) {
             console.log(res.data[0].location.lat,res.data[0].location.lng)
-            console.log(res.data[0].address)
+            console.log(res.data[0])
             // .address._distance
             that.setData({
               poi: res.data[0].address,
+              distance: res.data[0]._distance,
               latitude: res.data[0].location.lat,
               longitude: res.data[0].location.lng,
               markers: [{
