@@ -1,0 +1,154 @@
+.container {
+    height: 667px;
+    background-color: #f2f2f2;
+    width: 375px;
+    overflow: hidden;
+    position: relative;
+}
+.title__desc {
+    text-align: center;
+    width: 25%;
+    display: inline-block;
+    font-size: 12px;
+    color: #a9a9a9;
+}
+.content {
+  margin-top: 20px;
+}
+.content .title__desc {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.content .title__desc::before{
+  content:' ';
+  position: absolute;
+  height: 1px;
+  width: 128px;
+  top: 8px;
+  left: 20px;
+  background-color: #d6d6d3;
+}
+
+.content__title {
+  position: relative;
+}
+.content__title:before {
+  content:' ';
+  position: absolute;
+  height: 1px;
+  width: 128px;
+  top: 18px;
+  left: 226px;
+  background-color: #d6d6d3;
+}
+.content-card {
+    margin-top: 10px;
+    width: 298px;
+    height: 168px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 1px 8px #d6d3d3, 0 0 1px #d6d3d3, 0 0 1px#d6d3d3;
+    background-color: #fff;
+    margin-left: 38px;
+}
+
+.card-left {
+    flex: 6;
+    height: 168px;
+    line-height: 168px;
+    border-right: 2px dotted#d6d3d3;
+}
+
+.card-right {
+    flex: 4;
+}
+
+.card__tag {
+    top: -3px;
+    left: 5px;
+    position: absolute;
+}
+
+.card__desc {
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.card__desc .price {
+    margin-top: 0;
+    color: #ba3337;
+    font-size: 12px;
+}
+
+.card-left image {
+    width: 160px;
+    height: 140px;
+}
+
+.card__desc image {
+    height: 12px;
+    width: 12px;
+    vertical-align: middle;
+}
+
+.h3 {
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    opacity: .7;
+}
+
+.right-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.look__btn {
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.look__btn {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+button[type="primary"] {
+    background-color: #ba3337;
+}
+
+button[type="primary"]:hover {
+    background-color: #ba3337;
+}
+
+.right-footer view {
+    margin-top: 20px;
+    font-size: 8px;
+    color: #d6d3d3;
+}
+
+.card__tag {
+    background-color: #ba3337;
+    text-align: center;
+    color: #fff;
+    font-size: 8px;
+    border-radius: 5px;
+    padding: 3px 12px 3px 12px;
+}
+
+.card__tag image {
+    height: 8px;
+    width: 8px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.content__footer {
+  height: 350px;
+  width: 100%;
+  text-indent: -999;
+}

@@ -1,0 +1,42 @@
+<view class="container">
+	<view class="weui-cells__title header">欢迎订餐</view>
+	<view class="weui-cells weui-cells_after-title add__message">
+		<view class="weui-cell">
+			<view class="weui-cell__bd">送餐地址与时间</view>
+			<view class="weui-cell__ft" catchtap="toMap">更改</view>
+		</view>
+	</view>
+	<view class="weui-cells weui-cells_after-title">
+		<view class="weui-cell" bindtap="addressCheck">
+			<view class="weui-cell__bd f14" style="font-size: 14px;padding-right: 5px;">{{address[0]}}</view>
+        <view class="weui-cell__ft" checked="{{item.checked}}">
+				<icon class="weui-icon-checkbox_circle" type="circle" size="23" hidden="{{isConfirm}}"></icon>
+				<image src="../../../image/confirm.png" style="height: 26px; width: 26px; vertical-align: middle;" hidden="{{!isConfirm}}"></image>
+			</view>	
+		</view>
+	</view>
+	<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+
+	<view class="weui-cells__title">选择送餐时间</view>
+	<view class="weui-cells weui-cells_after-title">
+		<radio-group bindchange="radioChange">
+			<label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+          <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+            <view class="weui-cell__ft weui-cell__ft_in-radio" >
+							 <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+							 <image src="../../../image/confirm.png" style="height: 26px; width: 26px; vertical-align: middle; margin-right: 10px" wx:if="{{item.checked}}"></image>
+            </view>
+						<view class="weui-cell__bd" style="font-size: 14px">{{item.name}}</view>
+      </label>
+		</radio-group>
+		<button class="weui-btn" type="primary" catchtap="toMenu">
+			进入菜单
+		</button>
+		<view class="tips">
+			<text class="title">提示:</text>
+			<text class="desc" wx:if="{{checkedNum==0}}">无法取消订单的噢～</text>
+			<text class="desc" wx:if="{{checkedNum==1}}">根据当天实际时间完成的支付时间，您指定的订单可能顺延，下单后无法取消</text>
+			<text class="desc" wx:if="{{checkedNum==2}}">隔天价格可能会随价格、特价活动浮动</text>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="swiper">
+    <swiper class="swiper_box" bindchange="swiperchange" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}"
+      duration="{{duration}}" indicator-dots="{{indicatorDots}}" circular="{{circular}}">
+      <block wx:for-items="{{images}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <button class="weui-btn order__btn" type="primary" bindtap="toSelectKFC">开始点餐</button>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell card" bindtap="toCard">
+      <view class="weui-cell__hd">
+        <image src="{{cardIcon}}" style="margin-right: 5px;vertical-align: middle;width:40px; height: 40px;"></image>
+      </view>
+      <view class="weui-cell__bd">我的卡包</view>
+      <view class="weui-cell__ft">更多优惠卷</view>
+    </view>
+  </view>
+  <view class="weui-cells__title cart-title">
+    <view class="h3">蛋挞买一送一</view>
+    <view>有效期： 2017年04月27日-2017年5月03日</view>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell cart" bindtap="toList">
+      <view class="weui-cell__hd">
+        <image src="{{cartIcon}}" style="margin-right: 5px;vertical-align: middle;width:40px; height: 40px;"></image>
+      </view>
+      <view class="weui-cell__bd">我的订单</view>
+      <view class="weui-cell__ft">查看订单</view>
+    </view>
+  </view>
+
+</view>

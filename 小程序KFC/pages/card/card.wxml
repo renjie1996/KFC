@@ -1,0 +1,28 @@
+<view class="container">
+  <scroll-view class="content" style="height:100%;" scroll-y="true">
+    <view class="content__title">
+      <view class="title__desc">我的优惠卷</view>
+    </view>
+    <view class="content-card" wx:for="{{cardArray3}}" wx:for-item="card" hidden="{{orderHidden}}">
+      <view class="card-left">
+        <image src="{{card.url}}"></image>
+      </view>
+      <view class="card-right">
+        <view class="card__desc">
+          <view class="h3">{{card.name}}</view>
+        </view>
+        <view class="right-footer">
+          <button class="weui-btn look__btn" type="primary">查看详情</button>
+          <view>{{card.dateline}}</view>
+        </view>
+      </view>
+      <view class="card__tag">
+        <view><image src="../../image/kcoin.png"></image>商城</view>
+      </view>
+    </view>
+    <view class="content__footer"></view>
+  </scroll-view>
+  <view class="footer">
+
+  </view>
+</view>

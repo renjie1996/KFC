@@ -1,0 +1,56 @@
+<view class="container">
+  <scroll-view class="side-nav" style="height:100%;" scroll-y="true">
+    <view class="type-list">
+      <view class="type-item" wx:for="{{imgArray}}" wx:for-item="item" bindtap="changepage" id="{{index}}" scroll-top="{{scollTop}}">
+        <view class="type__img" style="background:url('{{item.url}}');background-size: contain;"></view>
+        <view class="type__desc">{{item.title}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <scroll-view class="main-page" style="height:100%;" scroll-y="true" scroll-into-view="{{scroll_into_view}}">
+    <view class="food-list" wx:for="{{foodArray}}" wx:for-item="item" id="foodtype{{index}}">
+      <view class="food__title">{{item.title}}</view>
+      <view class="food-item" wx:for="{{item.foodsIndex}}" wx:for-item="food" wx:for-index="foodidx" id="food{{index}}">
+        <image class="food-left" src='{{food.url}}'></image>
+        <view class="food-right">
+          <view class="food__name">{{food.name}}</view>
+          <view class="food__price">{{food.price}}¥</view>
+          <view class="food__add" data-foodidx="{{index}}{{foodidx}}" data-price="{{food.price}}" data-name="{{food.name}}" catchtap="addShopcart">+</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="shopcart" bindtap="showCart" hidden="{{cartIsHidden}}">
+    <view class="shopcart-main">
+      <view class="shopcart-left">
+        <image src="../../image/shopcart.png" class="shopcart__icon"></image>
+        <view class="shopcart__count">{{totalCount}}</view>
+      </view>
+      <view class="shopcart-middle">
+        <view class="shopcart__price">¥
+          <text>{{totalPrice}}</text>
+        </view>
+      </view>
+      <view class="shopcart-right" catchtap="toCount">
+        <text>选好了</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="list-mask" hidden="{{cartIndexIsHidden}}" animation="{{animationData}}">
+  <view hidden="{{cartIndexIsHidden}}" class="shopcart__items" wx:for="{{shoppingList}}" wx:for-item="item">
+    <view class="shopcart__item" hidden="{{cartIndexIsHidden}}">
+      <view class="cart__left">
+        <view class="item__h3">{{item.name}}</view>
+        <view class="item__price">¥{{item.price}}</view>
+      </view>
+      <view class="cart__right">
+        <view class="food__add food__add--delete" data-foodidx="{{index}}" data-price="{{item.price}}" data-name="{{item.name}}" catchtap="deleteShopcartInCart">-</view>
+        <text>{{item.num}}</text>
+        <view class="food__add" data-foodidx="{{index}}" data-price="{{item.price}}" data-name="{{item.name}}" catchtap="addShopcartInCart">+</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="header">
+    <view class="select-city">
+      <text>南昌</text>
+      <image src="../../image/sanjiao.png"></image>
+    </view>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping"
+          />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}" style="display: none">
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>实时搜索文本</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>实时搜索文本</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>实时搜索文本</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>实时搜索文本</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="content">
+		<map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}"
+		style="width: 100%; height: 100%" markers="{{markers}}" covers="{{covers}}" scale="18"></map>
+	</view>
+  <view class="footer">
+    <view class="address-title">你可能在的位置</view>
+    <scroll-view class="address-list" style="height:299px;" scroll-y="true">
+      <view class="address-item" wx:for="{{pois}}" wx:for-item="poi" 
+        data-name="{{poi.address}}" catchtap="ToDetailPage">
+        <image src="../../image/position.png" data-name="{{poi.address}}" catchtap="ToDetailPage"></image>
+        <text catchtap="ToDetailPage" data-name="{{poi.address}}">{{poi.address}}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

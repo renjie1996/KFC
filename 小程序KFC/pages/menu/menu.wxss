@@ -1,0 +1,247 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 667px;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.main-page {
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.side-nav {
+    height: 100%;
+    width: 21.333333%;
+    background-color: #f5f0e9;
+    z-index: 1;
+}
+
+.type-list {
+    width: 100%;
+    height: 100%;
+}
+
+.type-item {
+    width: 100%;
+    height: 92px;
+    text-align: center;
+    position: relative;
+}
+
+.type-item .type__img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.type-item .type__desc {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    font-size: 12px;
+    color: gray;
+}
+
+.page {
+    height: 100%;
+    border-bottom: 1px solid #000;
+}
+
+.buttonArea {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.food-item {
+    width: 100%;
+    height: 161px;
+    position: relative;
+}
+
+.food-left,
+.food-right {
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+}
+
+.food-left {
+    width: 140px;
+    height: 140px;
+    vertical-align: middle;
+}
+
+.food-right {
+    text-align: right;
+}
+
+.food__name {
+    opacity: .8;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.food__price {
+    font-size: 28px;
+    color: #e02d3f;
+    font-weight: 600;
+}
+
+.food__add {
+    float: right;
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: center;
+    color: #e02d3f;
+    border: 1px solid #d6d3d3;
+    border-radius: 37px;
+}
+.food__title,.food-item {
+    border-bottom: 1px solid #d6d3d3;
+}
+.food__title {
+    color: gray;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    padding: 0 5px;
+}
+.shopcart {
+    position: fixed;
+    background-color: #e02d3f;
+    height: 45px;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+    z-index: 9;
+}
+.shopcart-main {
+    display: flex;
+    height: 45px;
+}
+.shopcart-left {
+    flex: 2;
+    position: relative;
+}
+.shopcart__icon {
+    padding-top: 8px;
+    height: 32px;
+    width: 50px;
+}
+.shopcart__count {
+    position: absolute;
+    top: 5px;
+    left: 46px;
+    height: 15px;
+    width: 15px;
+    font-size: 12px;
+    border-radius: 99px;
+    background-color: #ff7b0f;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+}
+.shopcart-middle {
+    flex: 5;
+    background-color: #e02d3f;
+    border-right: 1px solid #fff;
+}
+.shopcart__price {
+    line-height: 45px;
+    text-align: left;
+    color: #fff;
+}
+.shopcart__price text {
+    font-size: 24px;
+}
+
+.shopcart-right {
+    position: relative;
+    flex: 3;
+    line-height: 45px;
+}
+.shopcart-right text {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 14px;
+}
+.shopcart-right:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 78px;
+    height: 12px;
+    width: 12px;
+    opacity: .7;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotateZ(45deg)
+}
+.item {
+    background-color: rebeccapurple ;
+}
+
+.list-mask {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.shopcart__items {
+    width: 100%; 
+}
+.shopcart__items {
+    width: 375px;
+    background-color: rgba(0,0,0,.7);
+  }
+  .shopcart__item {
+    height: 65px;
+    display: flex;
+    background-color: #fff;
+    border-bottom: 1px solid #f5f0e9;
+  }
+  .cart__left {
+    margin-left: 4px;
+    margin-top: 8px;
+    flex: 1;
+  }
+
+  .cart__right {
+      margin-top: 14px;
+  }
+  .cart__right .food__delete, .cart__right text,.cart__right .food__add {
+    float: left;
+    margin-right: 6px;
+  }
+  .shopcart__items:after,.cart__right:after {
+    clear: both;
+    content: ' ';
+    display: table;
+  }
+  .item__h3 {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .item__price {
+    font-size: 18px;
+    color: #e02d3f;
+  }

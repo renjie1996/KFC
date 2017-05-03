@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .shopcart__items {
+    width: 375px;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+  .shopcart__item {
+    height: 55px;
+    display: flex;
+  }
+  .cart__left {
+    margin-left: 4px;
+    margin-top: 8px;
+    flex: 1;
+  }
+  .food__delete, .cart__right text,.food__add {
+    float: left;
+  }
+  .cart__right:after {
+    clear: both;
+    content: ' ';
+    display: table;
+  }
+  .item__h3 {
+    font-size: 12px;
+  }
+  .item__price {
+    font-size: 16px;
+    color: red;
+  }
+  </style>
+</head>
+<body>
+  <div class="shopcart__items">
+    <div class="shopcart__item ">
+      <div class="cart__left">
+        <div class="item__h3">皮卡丘套餐c<a href="#">详情</a></div>
+        <div class="item__price">¥33.0</div>
+      </div>
+      <div class="cart__right">
+        <div class="food__delete" data-foodidx="{{index}}{{foodidx}}" data-price="{{food.price}}" data-name="{{food.name}}" catchtap="deleteShopcart">+</div>
+        <text>1</text>
+        <div class="food__add" data-foodidx="{{index}}{{foodidx}}" data-price="{{food.price}}" data-name="{{food.name}}" catchtap="addShopcart">+</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<view class="container">
+  <view class="title">
+    <view class="title-dots">
+      <view class="title__dot title-takeout__dot" data-selected="takeout" catchtap="takeoutShow"></view>
+      <view class="title__dot title-hall__dot" data-selected="hall" catchtap="hallShow"></view>
+      <view class="title__dot title-order__dot" data-selected="order" catchtap="orderShow"></view>
+      <view class="title__dot title-active__dot" data-selected="active" catchtap="activeShow"></view>
+    </view>
+    <view class="title-descs">
+      <view class="title__desc title-takeout__desc" data-selected="takeout" catchtap="takeoutShow">外送</view>
+      <view class="title__desc title-hall__desc" data-selected="hall" catchtap="hallShow">堂食</view>
+      <view class="title__desc title-order__desc" data-selected="order" catchtap="orderShow">自助点餐</view>
+      <view class="title__desc title-active__desc" data-selected="active" catchtap="activeShow">品牌活动</view>
+    </view>
+    <view class="title-icons">
+      <view class="title__icon title-takeout__icon" hidden="{{takeoutHidden}}">
+        <image src="../../image/takeout_active.png"></image>
+      </view>
+      <view class="title__icon title-hall__icon" hidden="{{hallHidden}}">
+        <image src="../../image/hall_active.png"></image>
+      </view>
+      <view class="title__icon title-order__icon show" hidden="{{orderHidden}}">
+        <image src="../../image/order.png"></image>
+      </view>
+      <view class="title__icon title-active__icon" hidden="{{activeHidden}}">
+        <image src="../../image/active.png"></image>
+      </view>
+    </view>
+  </view>
+  <scroll-view class="content" style="height:100%;" scroll-y="true">
+    <view class="content__title">
+      <view class="title__desc">我的优惠卷</view>
+    </view>
+    <view class="content-card" wx:for="{{cardArray2}}" wx:for-item="card" hidden="{{hallHidden}}">
+      <view class="card-left">
+        <image src="{{card.url}}"></image>
+      </view>
+      <view class="card-right">
+        <view class="card__desc">
+          <view class="h3">{{card.name}}</view>
+          <view class="price">{{card.price}}<image src="../../image/coin.png"></image>
+          </view>
+        </view>
+        <view class="right-footer">
+          <button class="weui-btn look__btn" type="primary">查看详情</button>
+          <view>{{card.dateline}}</view>
+        </view>
+      </view>
+      <view class="card__tag">
+        <view><image src="../../image/kcoin.png"></image>商城</view>
+      </view>
+    </view>
+    <view class="content-card" wx:for="{{cardArray3}}" wx:for-item="card" hidden="{{orderHidden}}">
+      <view class="card-left">
+        <image src="{{card.url}}"></image>
+      </view>
+      <view class="card-right">
+        <view class="card__desc">
+          <view class="h3">{{card.name}}</view>
+          <view class="price">{{card.price}}<image src="../../image/coin.png"></image>
+          </view>
+        </view>
+        <view class="right-footer">
+          <button class="weui-btn look__btn" type="primary">查看详情</button>
+          <view>{{card.dateline}}</view>
+        </view>
+      </view>
+      <view class="card__tag">
+        <view><image src="../../image/kcoin.png"></image>商城</view>
+      </view>
+    </view>
+    <view class="content__footer"></view>
+  </scroll-view>
+  <view class="footer">
+
+  </view>
+</view>
