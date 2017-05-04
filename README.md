@@ -64,17 +64,17 @@
     └── utils
         └── util.js
 ### app.json
-    "pages": [
-    "pages/index/index",   // 首页
-    "pages/KFC/KFC",       // K金商城页
-    "pages/menu/menu",     // 菜单页
-    "pages/card/card",     // 卡包页
-    "pages/order/order",   // 订单页
-    "pages/takeout/takeout",  // 外卖地图页
-    "pages/takeout/message/message", // 填写外卖信息页
-    "pages/halladdress/halladdress", // 附近餐厅页
-    "pages/logs/logs" // 日志页
-    ]
+        "pages": [
+        "pages/index/index",   // 首页
+        "pages/KFC/KFC",       // K金商城页
+        "pages/menu/menu",     // 菜单页
+        "pages/card/card",     // 卡包页
+        "pages/order/order",   // 订单页
+        "pages/takeout/takeout",  // 外卖地图页
+        "pages/takeout/message/message", // 填写外卖信息页
+        "pages/halladdress/halladdress", // 附近餐厅页
+        "pages/logs/logs" // 日志页
+        ]
 我们可以通过官网的文档或W3C教程上初始化了一个小程序目录，小程序的每个页面都放在pages目录下
 每次添加一个新页面，都需要先在app.json.page下注册。
 
