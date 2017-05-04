@@ -118,31 +118,30 @@ mock.js大红大紫，让前端独立于后端，用它来模拟KFC数据
       
 **画图完成后用回调将Toast去除**
 
-    this.mapCtx = wx.createMapContext('myMap', function () {
+    `this.mapCtx = wx.createMapContext('myMap', function () {
         wx.hideToast();
-    })
+    })`
     
 WXML:
 
-    <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}"
+    `<map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}"
       style="width: 100%; height: 100%" markers="{{markers}}" covers="{{covers}}" scale="18">
-    </map>
+    </map>`
     
 ### 腾讯地图API使用
 以搜附近地点渲染至页面列表为例
 1. 引入核心类
  [腾讯地图小程序版](http://lbs.qq.com/qqmap_wx_jssdk/index.html)下载js并获取key
  
-     let QQMapWX = require('qqmap-wx-jssdk.min.js');
+     `let QQMapWX = require('qqmap-wx-jssdk.min.js');
      let demo = new QQMapWX({
             key: '5Q2BZ-O3W24-V6DUN-DZ4Z7-H427K-WCB7R' // 必填
-     });
+     });`
      
 2. 调用APIhttp:[reverseGeocoder]
 (http://lbs.qq.com/qqmap_wx_jssdk/method-reverseGeocoder.html)
 
-
-     demo.reverseGeocoder({
+     `demo.reverseGeocoder({
                location: {
                  latitude: _latitude,
                  longitude: _longitude
@@ -160,7 +159,7 @@ WXML:
                    pois: res.result.pois
                  })
                }
-             });
+             });`
              
 通过setData() 我们的数据就传到data上去中了便用此渲染页面上去
 
