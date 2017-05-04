@@ -92,15 +92,15 @@ mock.js大红大紫，让前端独立于后端，用它来模拟KFC数据
   
     [{ "title": "这里放左边列表的组名",
      
-     "foodsIndex": [{
-    
-     "name": "这里放每个食物的名字",
-    
-     "price": "11.0",
-    
-     "url": "http://imgm.4008823823.com.cn/kfcmwos/img//S/269_116012.jpg"
-    
-     },
+       "foodsIndex": [{
+
+       "name": "这里放每个食物的名字",
+
+       "price": "11.0",
+
+       "url": "http://imgm.4008823823.com.cn/kfcmwos/img//S/269_116012.jpg"
+
+      },
     
      {},{},{}]
  
