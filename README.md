@@ -91,12 +91,19 @@ mock.js大红大紫，让前端独立于后端，用它来模拟KFC数据
 因为菜单中每个左侧的分类对应一组数据，在右侧也需要渲染类名，因此简单模拟结构
   
   `[{`
+  
      `"title": "这里放左边列表的组名",`
+     
     ` "foodsIndex": [{`
+    
     ` "name": "这里放每个食物的名字",`
+    
     ` "price": "11.0",`
+    
     ` "url": "http://imgm.4008823823.com.cn/kfcmwos/img//S/269_116012.jpg"`
+    
     ` },`
+    
     ` {},{},{}]`
  
 你可以尝试自己去扒[肯德基点餐](https://m.4008823823.com.cn/kfcmwos/menu.htm?classId=116)，或者用我扒好的[肯德基API](https://www.easy-mock.com/mock/5905d4597a878d73716e2c6b/kfc/kfc)
