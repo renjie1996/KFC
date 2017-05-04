@@ -10,75 +10,55 @@
 3. **easy-mock:**  [easy-mock](www.easy-mock.com)模拟后端数据，后面会简单介绍配置。
 4. **腾讯地图API:**   [腾讯地图小程序](http://lbs.qq.com/qqmap_wx_jssdk/index.html)有地点搜索、关键词输入提示、逆地址解析(坐标位置描述)地址解析(地址转坐标)距离计算、获取城市列表、获取城市区县的一步配置教程
 ## 页面结构
-├── .DS_Store
-├── app.js
-├── app.json
-├── app.wxss
-├── image
-│   ├── .DS_Store
-│   ├── 1.png
-│   ├── KFC.png
-│   ├── KFC_active.png
-│   ├── active.png
-│   ├── address.png
-│   ├── cardbag.png
-│   ├── cart.png
-│   ├── coin.png
-│   ├── confirm.png
-│   ├── hall.png
-│   ├── hall_active.png
-│   ├── kcoin.png
-│   ├── order.png
-│   ├── position.png
-│   ├── sanjiao.png
-│   ├── shopcart.png
-│   ├── takeout.png
-│   └── takeout_active.png
-├── pages
-│   ├── .DS_Store
-│   ├── KFC
-│   │   ├── KFC.js
-│   │   ├── KFC.wxml
-│   │   └── KFC.wxss
-│   ├── card
-│   │   ├── card.js
-│   │   ├── card.wxml
-│   │   └── card.wxss
-│   ├── halladdress
-│   │   ├── .DS_Store
-│   │   ├── halladdress.js
-│   │   ├── halladdress.wxml
-│   │   └── halladdress.wxss
-│   ├── index
-│   │   ├── index.js
-│   │   ├── index.wxml
-│   │   └── index.wxss
-│   ├── logs
-│   │   ├── logs.js
-│   │   ├── logs.json
-│   │   ├── logs.wxml
-│   │   └── logs.wxss
-│   ├── menu
-│   │   ├── index.html
-│   │   ├── menu.js
-│   │   ├── menu.wxml
-│   │   └── menu.wxss
-│   ├── order
-│   │   ├── order.js
-│   │   ├── order.wxml
-│   │   └── order.wxss
-│   └── takeout
-│       ├── message
-│       │   ├── message.js
-│       │   ├── message.wxml
-│       │   └── message.wxss
-│       ├── qqmap-wx-jssdk.min.js
-│       ├── takeout.js
-│       ├── takeout.wxml
-│       └── takeout.wxss
-├── style
-│   ├── .DS_Store
-│   └── weui.wxss
-└── utils
-    └── util.js
+    ├── .DS_Store
+    ├── app.js
+    ├── app.json
+    ├── app.wxss
+    ├── pages
+    │   ├── .DS_Store
+    │   ├── KFC
+    │   │   ├── KFC.js
+    │   │   ├── KFC.wxml
+    │   │   └── KFC.wxss
+    │   ├── card
+    │   │   ├── card.js
+    │   │   ├── card.wxml
+    │   │   └── card.wxss
+    │   ├── halladdress
+    │   │   ├── .DS_Store
+    │   │   ├── halladdress.js
+    │   │   ├── halladdress.wxml
+    │   │   └── halladdress.wxss
+    │   ├── index
+    │   │   ├── index.js
+    │   │   ├── index.wxml
+    │   │   └── index.wxss
+    │   ├── logs
+    │   │   ├── logs.js
+    │   │   ├── logs.json
+    │   │   ├── logs.wxml
+    │   │   └── logs.wxss
+    │   ├── menu
+    │   │   ├── index.html
+    │   │   ├── menu.js
+    │   │   ├── menu.wxml
+    │   │   └── menu.wxss
+    │   ├── order
+    │   │   ├── order.js
+    │   │   ├── order.wxml
+    │   │   └── order.wxss
+    │   └── takeout
+    │       ├── message
+    │       │   ├── message.js
+    │       │   ├── message.wxml
+    │       │   └── message.wxss
+    │       ├── qqmap-wx-jssdk.min.js
+    │       ├── takeout.js
+    │       ├── takeout.wxml
+    │       └── takeout.wxss
+    ├── style
+    │   ├── .DS_Store
+    │   └── weui.wxss
+    └── utils
+        └── util.js
 
