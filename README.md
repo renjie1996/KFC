@@ -8,7 +8,7 @@
 1. **开发调试工具:**   [微信小程序平台教程](https://mp.weixin.qq.com/debug/wxadoc/dev/),安装好最基本的啦！稍微过一遍简易文档。
 2. **开发‘字典’文档:**  [微信小程序开发教程手册文档](https://www.w3cschool.cn/weixinapp/9wou1q8j.html)功能使用方法都在上面挺全的。
 3. **easy-mock:**  [easy-mock模拟后端数据](www.easy-mock.com)模拟后端数据，后面会简单介绍配置。
-4. **腾讯地图API:**  [腾讯地图小程序专用教程](http://lbs.qq.com/qqmap_wx_jssdk/index.html)有地点搜索、关键词输入提示、逆地址解析(坐标位置描述)地址解析(地址转坐标)距离计算、获取城市列表、获取城市区县的一步配置教程
+4. **腾讯地图API:**   [腾讯地图小程序专用教程](http://lbs.qq.com/qqmap_wx_jssdk/index.html)有地点搜索、关键词输入提示、逆地址解析(坐标位置描述)地址解析(地址转坐标)距离计算、获取城市列表、获取城市区县的一步配置教程
 ## 页面结构
 
 
