@@ -106,12 +106,60 @@ mock.js大红大紫，让前端独立于后端，用它来模拟KFC数据
  
 你可以尝试自己去扒[肯德基点餐](https://m.4008823823.com.cn/kfcmwos/menu.htm?classId=116)，或者用我扒好的[肯德基API](https://www.easy-mock.com/mock/5905d4597a878d73716e2c6b/kfc/kfc)
 ## 地图API的使用
-### 小程序地图初始化
-1. 用toast优化耗时加载
-     wx.showToast({
-       title: '地图加载中',
-       icon: 'loading',
-       duration: 0,
-       mask: true
-     })
+### [小程序地图初始化](https://www.w3cschool.cn/weixinapp/weixinapp-map.html)
+**用toast优化耗时加载**
 
+     wx.showToast({
+        title: '地图加载中',
+        icon: 'loading',
+        duration: 0,
+        mask: true
+      })
+**画图完成后用回调将Toast去除**
+
+    this.mapCtx = wx.createMapContext('myMap', function () {
+        wx.hideToast();
+    })
+WXML:
+
+    <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}"
+      style="width: 100%; height: 100%" markers="{{markers}}" covers="{{covers}}" scale="18">
+    </map>
+### 腾讯地图API使用
+以搜附近地点渲染至页面列表为例
+1. 引入核心类
+ [腾讯地图小程序版](http://lbs.qq.com/qqmap_wx_jssdk/index.html)下载js并获取key
+ 
+     let QQMapWX = require('qqmap-wx-jssdk.min.js');
+     let demo = new QQMapWX({
+            key: '5Q2BZ-O3W24-V6DUN-DZ4Z7-H427K-WCB7R' // 必填
+     });
+2. 调用APIhttp:[reverseGeocoder]
+(http://lbs.qq.com/qqmap_wx_jssdk/method-reverseGeocoder.html)
+
+     demo.reverseGeocoder({
+               location: {
+                 latitude: _latitude,
+                 longitude: _longitude
+               },
+               get_poi: 1,
+               success: function (res) {
+                 //         console.log(res);
+               },
+               fail: function (res) {
+                 console.log(res);
+               },
+               complete: function (res) {
+                 console.log(res);
+                 that.setData({
+                   pois: res.result.pois
+                 })
+               }
+             });
+通过setData() 我们的数据就传到data上去中了便用此渲染页面上去
+
+          <view class="address-item" wx:for="{{pois}}" wx:for-item="poi" 
+            data-name="{{poi.address}}" catchtap="ToDetailPage">
+            <image src="../../image/position.png" data-name="{{poi.address}}" catchtap="ToDetailPage"></image>
+            <text catchtap="ToDetailPage" data-name="{{poi.address}}">{{poi.address}}</text>
+          </view>
