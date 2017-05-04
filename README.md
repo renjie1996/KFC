@@ -83,7 +83,10 @@
 每次添加一个新页面，都需要先在app.json.page下注册。
 ## 数据模拟
 mock.js大红大紫，让前端独立于后端，用它来模拟KFC数据
-[mockjs前端开发独立于后端](https://i.jakeyu.top/2016/08/19/mockjs%E8%AE%A9%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B8%8D%E4%BE%9D%E8%B5%96%E5%90%8E%E7%AB%AF/)
+不太清楚使用的同学可以参考：
+1. [mockjs前端开发独立于后端](https://i.jakeyu.top/2016/08/19/mockjs%E8%AE%A9%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B8%8D%E4%BE%9D%E8%B5%96%E5%90%8E%E7%AB%AF/)
+2. [掘金：easy-mock](https://juejin.im/post/58ff1fae61ff4b0066792f6e)
+3. [mock.js那点事](https://juejin.im/post/58f9eec0a22b9d00658ee4b7)
 
 
 
