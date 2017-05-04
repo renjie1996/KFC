@@ -106,5 +106,12 @@ mock.js大红大紫，让前端独立于后端，用它来模拟KFC数据
  
 你可以尝试自己去扒[肯德基点餐](https://m.4008823823.com.cn/kfcmwos/menu.htm?classId=116)，或者用我扒好的[肯德基API](https://www.easy-mock.com/mock/5905d4597a878d73716e2c6b/kfc/kfc)
 ## 地图API的使用
-### 
+### 小程序地图初始化
+1. 用toast优化耗时加载
+     wx.showToast({
+       title: '地图加载中',
+       icon: 'loading',
+       duration: 0,
+       mask: true
+     })
 
