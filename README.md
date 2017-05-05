@@ -128,7 +128,7 @@ WXML:
              style="width: 100%; height: 100%" markers="{{markers}}" covers="{{covers}}" scale="18">
        </map>
 ``` 
-### 腾讯地图API使用
+### 腾讯地图API使用-逆地址解析
 以搜附近地点渲染至页面列表为例
 1. 引入核心类
  [腾讯地图小程序版](http://lbs.qq.com/qqmap_wx_jssdk/index.html)下载js并获取key
@@ -172,4 +172,38 @@ WXML:
                 catchtap="ToDetailPage"></image>
              <text catchtap="ToDetailPage" data-name="{{poi.address}}">{{poi.address}}</text>
            </view>
+```
+### 地名搜索
+以搜周围的KFC为例
+```javascript
+        demo.search({
+          keyword: '肯德基',
+          location: {
+            latitude: _latitude,
+            longitude: _longitude
+          },
+          success: function (res) {
+            // console.log(res);
+          },
+          fail: function (res) {
+            // console.log(res);
+          },
+          complete: function (res) {
+            console.log(res.data[0].location.lat,res.data[0].location.lng)
+            console.log(res.data[0])
+            // .address._distance
+            that.setData({
+              poi: res.data[0].address,
+              distance: res.data[0]._distance,
+              latitude: res.data[0].location.lat,
+              longitude: res.data[0].location.lng,
+              markers: [{
+                latitude: res.data[0].location.lat,
+                longitude: res.data[0].location.lng,
+                name: 'KFC',
+                desc: 'KFC在您身边'
+              }]
+            })
+          }
+        });
 ```
