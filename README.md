@@ -164,8 +164,8 @@ WXML:
 ```
              
 通过setData() 我们的数据就传到data上去中了便用此渲染页面上去
-```
-          <view class="address-item" wx:for="{{pois}}" wx:for-item="poi" 
+```javascript
+          <view class="address-item" wx:for="{{pois}}" wx:for-item="poi" 
              data-name="{{poi.address}}" catchtap="ToDetailPage">
              <image src="../../image/position.png" data-name="{{poi.address}}" catchtap="ToDetailPage"></image>
              <text catchtap="ToDetailPage" data-name="{{poi.address}}">{{poi.address}}</text>
