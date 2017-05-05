@@ -117,21 +117,22 @@ mock.js大红大紫，让前端独立于后端，用它来模拟KFC数据
       })
       
 **画图完成后用回调将Toast去除**
-```
+```javascript
     this.mapCtx = wx.createMapContext('myMap', function () {
         wx.hideToast();
     })
 ```
 WXML:
-```<map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}"
-      style="width: 100%; height: 100%" markers="{{markers}}" covers="{{covers}}" scale="18">
-    </map>
+```html
+       <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}"
+             style="width: 100%; height: 100%" markers="{{markers}}" covers="{{covers}}" scale="18">
+       </map>
 ``` 
 ### 腾讯地图API使用
 以搜附近地点渲染至页面列表为例
 1. 引入核心类
  [腾讯地图小程序版](http://lbs.qq.com/qqmap_wx_jssdk/index.html)下载js并获取key
- ```
+ ```javascript
      let QQMapWX = require('qqmap-wx-jssdk.min.js');
      let demo = new QQMapWX({
             key: '5Q2BZ-O3W24-V6DUN-DZ4Z7-H427K-WCB7R' // 必填
@@ -141,7 +142,7 @@ WXML:
 2. 调用APIhttp:[reverseGeocoder]
 (http://lbs.qq.com/qqmap_wx_jssdk/method-reverseGeocoder.html)
 
-```
+```javascript
      demo.reverseGeocoder({
                location: {
                  latitude: _latitude,
@@ -167,7 +168,8 @@ WXML:
 ```javascript
           <view class="address-item" wx:for="{{pois}}" wx:for-item="poi" 
              data-name="{{poi.address}}" catchtap="ToDetailPage">
-             <image src="../../image/position.png" data-name="{{poi.address}}" catchtap="ToDetailPage"></image>
+             <image src="../../image/position.png" data-name="{{poi.address}}" 
+                catchtap="ToDetailPage"></image>
              <text catchtap="ToDetailPage" data-name="{{poi.address}}">{{poi.address}}</text>
            </view>
 ```
