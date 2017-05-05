@@ -32,7 +32,7 @@ Page({
   toList: function(e) {
     console.log(e)
     wx.navigateTo({
-      url: '/pages/menu/menu'
+      url: '/pages/order/order'
     })
   },
   toSelectKFC: function (e) {

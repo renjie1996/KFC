@@ -1,5 +1,5 @@
 <view class="container">
-	<view class="weui-cells__title header">欢迎订餐</view>
+	<view class="weui-cells__title header">欢迎订餐<text>{{userName}}</text><text wx:if="{{userSex==1}}" style="margin-left: 0px">先生</text><text style="margin-left: 0px" wx:if="{{userSex==2}}">女士</text></view>
 	<view class="weui-cells weui-cells_after-title add__message">
 		<view class="weui-cell">
 			<view class="weui-cell__bd">送餐地址与时间</view>

@@ -80,6 +80,6 @@ Page({
     })
     setTimeout(function () {
       wx.hideToast();
-    },2000)
+    },2000/**/)
   }
 })

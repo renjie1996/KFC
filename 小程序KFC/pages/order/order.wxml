@@ -1,5 +1,78 @@
-<view>
-  <view class="weui-cells">
-    <view></view>
+<view class="container">
+  <view class="title" catchtap="selectElement">
+    <view class="weui-cells__title">更改用餐方式</view>
+    <view class="title-dots">
+      <view class="title__dot title-takeout__dot" data-selected="takeout"></view>
+      <view class="title__dot title-hall__dot" data-selected="hall"></view>
+    </view>
+    <view class="title-descs">
+      <view class="title__desc title-takeout__desc" data-selected="takeout">外送</view>
+      <view class="title__desc title-hall__desc" data-selected="hall">堂食</view>
+    </view>
+    <view class="title-icons">
+      <view class="title__icon title-takeout__icon" hidden="{{elementToggle}}">
+        <image src="../../image/takeout_active.png"></image>
+      </view>
+      <view class="title__icon title-hall__icon" hidden="{{!elementToggle}}">
+        <image src="../../image/hall_active.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="address" hidden="{{elementToggle}}">
+      <view class="address-icon--left">
+        <image src="../../image/position.png"></image>
+      </view>
+      <view class="address-index--middle">
+        <view class="user__desc">{{userName}}<text>{{OrderWay}}</text></view>
+        <view class="address__desc">{{address}}</view>
+      </view>
+      <view class="address--right">
+        <view></view>
+      </view>
+    </view>
+    <view class="shopping-list">
+      <view class="shopping-item" wx:for="{{shoppingList}}" wx:key="item">
+        <view class="item__name">{{item.name}}</view>
+        <view class="item__num">{{item.num}}份</view>
+        <view class="item__price">¥{{item.price}}</view>
+      </view>
+      <view class="shopping-footer">
+        待支付{{totalPrice}}元
+      </view>
+    </view>
+  </view>
+
+  <view class="shopcart" bindtap="showCart" hidden="{{cartIsHidden}}">
+    <view class="shopcart-main">
+      <view class="shopcart-left">
+        <image src="../../image/shopcart.png" class="shopcart__icon"></image>
+        <view class="shopcart__count">{{totalCount}}</view>
+      </view>
+      <view class="shopcart-middle">
+        <view class="shopcart__price">¥
+          <text>{{totalPrice}}</text>
+        </view>
+      </view>
+      <view class="shopcart-right" catchtap="toCount">
+        <text>支付</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="list-mask" hidden="{{cartIndexIsHidden}}" animation="{{animationData}}">
+  <view hidden="{{cartIndexIsHidden}}" class="shopcart__items" wx:for="{{shoppingList}}" wx:for-item="item">
+    <view class="shopcart__item" hidden="{{cartIndexIsHidden}}">
+      <view class="cart__left">
+        <view class="item__h3">{{item.name}}</view>
+        <view class="item__price">¥{{item.price}}</view>
+      </view>
+      <view class="cart__right">
+        <view class="food__add food__add--delete" data-foodidx="{{index}}" data-price="{{item.price}}" data-name="{{item.name}}"
+          catchtap="deleteShopcartInCart">-</view>
+        <text>{{item.num}}</text>
+        <view class="food__add" data-foodidx="{{index}}" data-price="{{item.price}}" data-name="{{item.name}}" catchtap="addShopcartInCart">+</view>
+      </view>
+    </view>
   </view>
 </view>

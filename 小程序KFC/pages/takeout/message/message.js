@@ -7,7 +7,9 @@ Page({
     ],
     address: [],
     isConfirm: true,
-    checkedNum: 0
+    checkedNum: 0,
+    userName: '',
+    userSex: ''
   },
   onReady: function (e) {
     let that = this;
@@ -20,6 +22,26 @@ Page({
         })
       }
     });
+  },
+  onLoad: function (e) {
+    let that = this
+    wx.getUserInfo({
+      success: function (res) {
+        let userInfo = res.userInfo
+        let nickName = userInfo.nickName
+        let avatarUrl = userInfo.avatarUrl
+        let gender = userInfo.gender //性别 0：未知、1：男、2：女 
+        let province = userInfo.province
+        let city = userInfo.city
+        let country = userInfo.country
+        // console.log(nickName)
+        that.setData({
+          userName: nickName,
+          userSex: gender
+        })
+      }
+    })
+
   },
   radioChange: function (e) {
     console.log('radio发生change事件，携带value值为：', e.detail.value);
@@ -61,6 +83,11 @@ Page({
     wx.navigateBack()
   },
   toMenu: function () {
+    let orderway = this.data.radioItems[this.data.checkedNum].name
+    wx.setStorage({
+      key: "OrderWay",
+      data: orderway
+    });
     if (this.data.isConfirm) {
       wx.navigateTo({
         url: '/pages/menu/menu'

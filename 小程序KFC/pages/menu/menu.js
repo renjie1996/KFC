@@ -209,9 +209,11 @@ Page({
     })
   },
   toCount: function (e) {
+    console.log(this.data.totalCount)
     let OrderMenu = {
       list: this.data.shoppingList,
-      price: this.data.totalCount
+      price: this.data.totalPrice,
+      count: this.data.totalCount
     }
     wx.setStorage({
       key: "OrderMenu",

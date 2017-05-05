@@ -11,7 +11,7 @@ Page({
   onReady: function () {
     console.log('ready');
     wx.setNavigationBarTitle({
-      title: '我的'
+      title: '外卖地址'
     })
     wx.getLocation({
       type: 'wgs84',

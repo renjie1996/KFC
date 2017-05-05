@@ -4,6 +4,9 @@
   background-color: #f2f2f2;
   font-size: 12px;
 }
+.header text {
+  margin-left: 10px;
+}
 .f14 {
   font-style: 14px;
   opacity: .7;
