@@ -149,8 +149,7 @@ WXML:
      });
  ```
      
-2. 调用APIhttp:[reverseGeocoder]
-(http://lbs.qq.com/qqmap_wx_jssdk/method-reverseGeocoder.html)
+2. 调用API[reverseGeocoder](http://lbs.qq.com/qqmap_wx_jssdk/method-reverseGeocoder.html)
 
 ```javascript
      demo.reverseGeocoder({
