@@ -164,7 +164,7 @@ WXML:
              });
 ```
              
-通过setData() 我们的数据就传到data上去中了便用此渲染页面上去
+通过setData() 我们的数据就传到data上去中了便用此渲染页面上去，that保持对原page对象的引用哟
 ```javascript
           <view class="address-item" wx:for="{{pois}}" wx:for-item="poi" 
              data-name="{{poi.address}}" catchtap="ToDetailPage">
@@ -207,3 +207,5 @@ WXML:
           }
         });
 ```
+换汤不换药核心还是通过setData改变data从而让页面显示当前kfc
+
