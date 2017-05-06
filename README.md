@@ -9,6 +9,7 @@
 ## 体验地址
 #### [GIF太卡了太卡了，体验点我](http://lbs.qq.com/qqmap_wx_jssdk/index.html)
 http://xurenjie.cn:3000/img/KFC/KFC_gif.gif
+直接点餐会自动为你找到最近的餐厅，不过离最近的kfc太远的不太行
 ## 用到的工具和文档：
 1. **开发调试工具:**   [微信小程序平台教程](https://mp.weixin.qq.com/debug/wxadoc/dev/),安装好最基本的啦！稍微过一遍简易文档。
 2. **开发‘字典’文档:**  [微信小程序开发教程手册文档](https://www.w3cschool.cn/weixinapp/9wou1q8j.html)功能使用方法都在上面挺全的。通过
