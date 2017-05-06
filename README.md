@@ -245,4 +245,31 @@ gif炸了的话直接看下面部分的图吧，忽略底下的购物车
  
  ![](http://xurenjie.cn:3000/img/KFC/KFC5.png)
  
- 
+ 我在这里的做法是给每个商品都赋了一个dataset，以便点击不同的商品让不同的对象进入购物车数组,通过e.target.dataset拿到
+ ```javascript
+  // 是否有同种商品判断
+    if (this.data.shoppingList.length > 0) {
+      // 商品名是否相同判断，不重复添加同名商品
+      let isHave = this.data.shoppingList.findIndex(item => item.name == e.target.dataset.name)
+      if (isHave != -1) {
+        that.data.shoppingList[isHave].num++
+      } else {
+        // 购物车数组加进新的一样食品
+        that.data.shoppingList.push({
+          price: e.target.dataset.price,
+          name: e.target.dataset.name,
+          num: itemNum
+        })
+        // 动画效果的长度添加
+        move_length++
+      }
+    // 没有商品时直接添加
+    } else {
+      this.data.shoppingList.push({
+        price: e.target.dataset.price,
+        name: e.target.dataset.name,
+        num: itemNum
+      })
+      move_length++
+    }
+  ```
