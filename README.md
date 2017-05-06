@@ -303,3 +303,18 @@ let mlength = move_length * 55;
     this.animation = animation
     animation.bottom(mlength).step()
 ```
+加入动画序列，并设置好movelength
+```javascript
+this.setData({
+      animationData: animation.export()
+    })
+    this.setData({
+      shoppingList: shopping_list,
+      totalPrice: total_price,
+      totalCount: total_count,
+      // 购物车当有商品时弹出
+      cartIsHidden: false,
+      movelength: move_length
+    })
+  }
+```
