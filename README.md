@@ -321,7 +321,7 @@ this.setData({
 
 ## 页面传值
 ### 目前本小白了解的传值有三种：
-1. 设置全局的数据缓存[看这](https://www.w3cschool.cn/weixinapp/weixinapp-apidate.html)
+1. 设置全局的数据缓存[看这API](https://www.w3cschool.cn/weixinapp/weixinapp-apidate.html)
 2. url 附带字串传值
 
 参考大佬[掘金微信小程序多页面传参通信的探索与实践](https://juejin.im/post/5907f120b123db3ee48d2a4f)
