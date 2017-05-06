@@ -10,7 +10,7 @@
 ### 完成的功能：
 附近位置选择-联动菜单导航-模拟数据-抽屉式购物车-获取用户微信信息-页面传值-数据生成订单
 ## 体验地址
-#### [体验点我](http://xurenjie.cn:3000/img/KFC/KFC_gif.gif)
+#### [体验点我,比较大，请耐心等待2333，最好clone下来本地跑55555～](http://xurenjie.cn:3000/img/KFC/KFC_gif.gif)
 http://xurenjie.cn:3000/img/KFC/KFC_gif.gif
 
 抱歉！！GIF太卡了太卡了，简易clone下来本地跑起来效果最佳
