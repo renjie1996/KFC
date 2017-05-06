@@ -9,7 +9,8 @@
 ## 体验地址
 #### [体验点我](http://xurenjie.cn:3000/img/KFC/KFC_gif.gif)
 http://xurenjie.cn:3000/img/KFC/KFC_gif.gif
-抱歉！！GIF太卡了太卡了
+
+抱歉！！GIF太卡了太卡了，简易clone下来本地跑起来效果最佳
 直接点餐会自动为你找到最近的餐厅，不过离最近的kfc太远的不太行
 ## 用到的工具和文档：
 1. **开发调试工具:**   [微信小程序平台教程](https://mp.weixin.qq.com/debug/wxadoc/dev/),安装好最基本的啦！稍微过一遍简易文档。
@@ -243,3 +244,5 @@ gif炸了的话直接看下面部分的图吧，忽略底下的购物车
  ### 抽屉式购物车
  
  ![](http://xurenjie.cn:3000/img/KFC/KFC5.png)
+ 
+ 
