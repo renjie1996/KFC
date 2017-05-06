@@ -1,7 +1,6 @@
-let items = ['item1', 'item2', 'item3', 'item4']
 Page({
   data: {
-    elementToggle: null,
+    elementToggle: null, 
     shoppingList: [],
     totalPrice: 0,
     totalCount: 0,
