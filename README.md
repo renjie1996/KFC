@@ -273,3 +273,33 @@ gif炸了的话直接看下面部分的图吧，忽略底下的购物车
       move_length++
     }
   ```
+  
+#### 动画的使用
+可参照[API](https://www.w3cschool.cn/weixinapp/tcga1qcz.html)
+我在这里是做了一个增加商品时，抽屉往上滚动，删除为空时抽屉向下滚动
+```javascript
+data: {
+    totalCount: 0,  // 购物车的总数量
+    movelength: 0,  // 上移或下拉动画的单位距离
+    cartIsHidden: true, // 购物车是否隐藏
+    cartIndexIsHidden: true, // 购物车详情菜单是否隐藏
+    animationData: {} // 动画动作对象
+    }
+ ```
+ 滚动动画初始设置
+ ```javascript
+let animation = wx.createAnimation({
+  duration: 400,
+  timingFunction: "linear",
+  delay: 0
+});
+```
+动画产生的效果就以bottom的变化而产生
+ ```javascript
+let mlength = move_length * 55;
+    if (move_length > 1) {
+      mlength = 55 + (move_length - 1) * 65;
+    }
+    this.animation = animation
+    animation.bottom(mlength).step()
+```
