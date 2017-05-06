@@ -225,9 +225,7 @@ WXML:
 #### 侧nav与内容区的联动 
 ![](http://xurenjie.cn:3000/img/KFC/KFC_gif1.gif)
 
-gif炸了的话直接看图吧
-
-![](http://xurenjie.cn:3000/img/KFC/KFC5.png)
+gif炸了的话直接看下面部分的图吧，忽略底下的购物车
 
 左边点击菜单的不同种类，右边转到相应的的内容
 这里的实现，用到了[scroll-view的API](https://www.w3cschool.cn/weixinapp/weixinapp-scroll-view.html)
@@ -242,4 +240,6 @@ gif炸了的话直接看图吧
       scroll_into_view: "foodtype" + goPage
     })
  ```
-
+ ### 抽屉式购物车
+ 
+ ![](http://xurenjie.cn:3000/img/KFC/KFC5.png)
