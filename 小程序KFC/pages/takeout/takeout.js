@@ -1,18 +1,19 @@
 Page({
   data: {
-    inputShowed: false,
+    inputShowed: false, 
     inputVal: "",
-    latitude: 0,
-    longitude: 0,
-    markers: [],
-    pois: [],
-    kfcNear: ''
+    latitude: 0, 
+    longitude: 0, // 绘制地图所需的经纬度
+    markers: [], // 地图标记点
+    pois: [], // 附近的地名对象数组
+    kfcNear: '' // 最近的kfc，暂未使用
   },
   onReady: function () {
     console.log('ready');
     wx.setNavigationBarTitle({
       title: '外卖地址'
     })
+    // 得到当前位置
     wx.getLocation({
       type: 'wgs84',
       success: (res) => {
@@ -49,7 +50,7 @@ Page({
           },
           get_poi: 1,
           success: function (res) {
-            //         console.log(res);
+            // console.log(res);
           },
           fail: function (res) {
             console.log(res);
@@ -57,6 +58,7 @@ Page({
           complete: function (res) {
             console.log(res);
             that.setData({
+              // 将得到周围地名的数组
               pois: res.result.pois
             })
           }
@@ -83,23 +85,14 @@ Page({
           }
         });
         console.log(this.data.markers)
-
+        // 绘制地图
         this.mapCtx = wx.createMapContext('myMap', function () {
           wx.hideToast();
-        })
-        this.setData({
-          // latitude: _latitude,
-          // longitude: _longitude,
-          //  markers: [{
-          //   latitude: this.data.latitude,
-          //   longitude: this.data.longitude,
-          //   name: '当前位置',
-          //   desc: 'KFC在您身边'
-          // }]
         })
       }
     })
   },
+  // 设置选定位置为我的位置并跳转
   ToDetailPage: function (event) {
     console.log(event.target.dataset)
     let OrderAddress = {
