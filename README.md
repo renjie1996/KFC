@@ -224,7 +224,7 @@ WXML:
 
 ### 具体实现过程
 #### 侧nav与内容区的联动 
-![](http://xurenjie.cn:3000/img/KFC/KFC_gif1.gif)
+![](http://xurenjie.cn:3000/img/KFC/KFC_gif.gif)
 
 gif炸了的话直接看下面部分的图吧，忽略底下的购物车
 
