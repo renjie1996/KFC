@@ -4,7 +4,7 @@
 ## 起手做什么？
 由于本人吃货一枚，家门口有一家KFC，之前KFC的app经常有一些福利卷，既然用惯了这个便捷实惠的app，于是就做它了。
 言归正传，先来分析一下一步一步该做啥，做一个小demo成就感还是满满的。
-![](http://xurenjie.cn:3000/img/KFC/KFC2.png)
+
 ### 完成的功能：
 附近位置选择-联动菜单导航-模拟数据-抽屉式购物车-获取用户微信信息-页面传值-数据生成订单 
 ## 用到的工具和文档：
@@ -107,6 +107,7 @@ mock.js大红大紫，让前端独立于后端，用它来模拟KFC数据
  
 你可以尝试自己去扒[肯德基点餐](https://m.4008823823.com.cn/kfcmwos/menu.htm?classId=116)，或者用我扒好的[肯德基API](https://www.easy-mock.com/mock/5905d4597a878d73716e2c6b/kfc/kfc)
 ## 地图API的使用
+![](http://xurenjie.cn:3000/img/KFC/KFC2.png)
 ### [小程序地图初始化](https://www.w3cschool.cn/weixinapp/weixinapp-map.html)
 **用toast优化耗时加载**
 
