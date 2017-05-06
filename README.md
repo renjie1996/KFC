@@ -318,3 +318,53 @@ this.setData({
     })
   }
 ```
+
+## 页面传值
+### 目前本小白了解的传值有三种：
+1. 设置全局的数据缓存[看这](https://www.w3cschool.cn/weixinapp/weixinapp-apidate.html)
+2. url 附带字串传值
+
+参考大佬[掘金微信小程序多页面传参通信的探索与实践](https://juejin.im/post/5907f120b123db3ee48d2a4f)
+
+3. 引入事件订阅和发布onfire.js（最近准备撸撸）
+
+![](http://xurenjie.cn:3000/img/KFC/KFC6.png)
+
+比如这个页面，它的所有数据都来之于之前的选择
+我在自己项目里目前用的是本地存储的方式，比如地址的设置获取
+
+在选择页设置本地存储
+```javascript
+let OrderAddress = {
+      address: [],
+      isHall: false 
+    }
+    //遍历去重
+    let item = OrderAddress.address.find(item=>item==event.target.dataset.name)
+    if(!item){
+      OrderAddress.address.push(event.target.dataset.name)
+    }
+    wx.setStorage({
+      key: "OrderAddress",
+      data: OrderAddress,
+    });
+    wx.navigateTo({
+      url:'/pages/takeout/message/message'
+    })
+```
+
+在订单页拿到地址，对api不熟悉多console.log几下，没有什么解决不了的～
+```javascript
+wx.getStorage({
+      key: 'OrderAddress',
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          address: res.data.address[0],
+          elementToggle: res.data.isHall
+        })
+      }
+    })
+```
+
+     
