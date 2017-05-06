@@ -7,8 +7,9 @@
 ### 完成的功能：
 附近位置选择-联动菜单导航-模拟数据-抽屉式购物车-获取用户微信信息-页面传值-数据生成订单
 ## 体验地址
-#### [GIF太卡了太卡了，体验点我](http://lbs.qq.com/qqmap_wx_jssdk/index.html)
+#### [体验点我](http://xurenjie.cn:3000/img/KFC/KFC_gif.gif)
 http://xurenjie.cn:3000/img/KFC/KFC_gif.gif
+抱歉！！GIF太卡了太卡了
 直接点餐会自动为你找到最近的餐厅，不过离最近的kfc太远的不太行
 ## 用到的工具和文档：
 1. **开发调试工具:**   [微信小程序平台教程](https://mp.weixin.qq.com/debug/wxadoc/dev/),安装好最基本的啦！稍微过一遍简易文档。
