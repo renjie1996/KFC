@@ -224,4 +224,19 @@ WXML:
 ### 具体实现过程
 #### 侧nav与内容区的联动 
 ![](http://xurenjie.cn:3000/img/KFC/KFC_gif1.gif)
+gif炸了的话直接看图吧
+![](http://xurenjie.cn:3000/img/KFC/KFC5.png)
+左边点击菜单的不同种类，右边转到相应的的内容
+这里的实现，用到了[scroll-view的API](https://www.w3cschool.cn/weixinapp/weixinapp-scroll-view.html)
+给每个右边的内容对象渲染时附上id
+ ```html
+ <view class="food-list" wx:for="{{foodArray}}" wx:for-item="item" id="foodtype{{index}}">
+ ```
+ 再给每个nav的点击事件dataset解析一下
+ ```javascript
+ let goPage = e.currentTarget.id
+ this.setData({
+      scroll_into_view: "foodtype" + goPage
+    })
+ ```
 
